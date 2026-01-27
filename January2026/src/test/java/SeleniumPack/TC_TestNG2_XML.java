@@ -21,7 +21,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
- 
+import java.util.zip.DataFormatException;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -94,7 +95,7 @@ public class TC_TestNG2_XML {
  
  
   @DataProvider
-  public Object[][] dp() throws InvalidFormatException, IOException, ParserConfigurationException, SAXException {
+  public Object[][] dp() throws DataFormatException, IOException, ParserConfigurationException, SAXException {
 	  
 	  String[][] data1=new String[1][3];
 	  File xmlfile=new File(projectpath+"\\data.xml");

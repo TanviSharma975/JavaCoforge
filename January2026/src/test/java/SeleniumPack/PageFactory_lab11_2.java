@@ -52,7 +52,7 @@ public class PageFactory_lab11_2 {
     @FindBy(id = "button-search")
     WebElement advSearchSubmit;
  
-    public Lab11_PageFactory_2(WebDriver driver2) {
+    public void Lab11_PageFactory_2(WebDriver driver2) {
         this.driver = driver2;
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
