@@ -1,6 +1,6 @@
 package SeleniumPack;
 
-package SeleniumPac;
+
 
 import org.testng.annotations.Test;
  
@@ -36,12 +36,7 @@ public class TC_TestNG {
 	  Login_POM obj=new Login_POM(driver);
 	  
 	  		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-	  	/*
-	  		driver.findElement(By.name("username")).sendKeys(username);
-			driver.findElement(By.name("password")).sendKeys(password);
-			driver.findElement(By.xpath("//button[@type='submit']")).click();
-			boolean dashborad=driver.findElement(By.xpath("//h6[text()='Dashboard']")).isDisplayed();
-			*/
+	  	
 	  		obj.enterusername(username);
 	  		obj.enterpassword(password);
 	  		obj.clickonsubmit();

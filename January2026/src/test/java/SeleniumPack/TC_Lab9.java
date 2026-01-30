@@ -16,7 +16,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
-public class Lab9{
+public class TC_Lab9{
     WebDriver driver;
     JavascriptExecutor js;
     @Parameters("browser")

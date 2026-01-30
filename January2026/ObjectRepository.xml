@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<login_detail>
+<username>//input[@id='username']</username>
+<password>//input[@id='pass']</password>
+<login_button>//input[@value='Login']</login_button>
+</login_detail>

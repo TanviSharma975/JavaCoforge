@@ -1,19 +1,13 @@
 package SeleniumPack;
-
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
- 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
- 
 import static org.testng.Assert.*;
  
- 
 import java.time.Duration;
- 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,13 +18,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
- 
 public class TestNGTest_PageFactory {
 	WebDriver driver;
   @Test(dataProvider = "dp")
   public void f(String username, String password) {
 	  System.out.println("This is test");
-	  Login_PageFactory obj=PageFactory.initElements(driver, Login_PageFactory.class);
+	  Login_Page_Factory obj=PageFactory.initElements(driver, Login_Page_Factory.class);
 	  		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	  	/*
 	  		driver.findElement(By.name("username")).sendKeys(username);
@@ -42,7 +35,7 @@ public class TestNGTest_PageFactory {
 	  		obj.enterpassword(password);
 	  		obj.clickonsubmit();
 	  		boolean dashboard=obj.dashboardisplayed();
-
+ 
 			if(dashboard==true)
 			{
 				System.out.println("login successful");
@@ -53,7 +46,7 @@ public class TestNGTest_PageFactory {
 				System.out.println("login unsuccessful");
 				Assert.assertEquals(dashboard, false);
 			}
-
+ 
   }
   @BeforeMethod
   public void beforeMethod() {
@@ -62,13 +55,11 @@ public class TestNGTest_PageFactory {
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
   }
- 
   @AfterMethod
   public void afterMethod() {
 	  System.out.println("This is After Method");
 	  driver.quit();
   }
- 
  
   @DataProvider
   public Object[][] dp() {
@@ -81,30 +72,24 @@ public class TestNGTest_PageFactory {
   public void beforeClass() {
 	  System.out.println("This is Before Class");
   }
- 
   @AfterClass
   public void afterClass() {
 	  System.out.println("This is After Class");
   }
- 
   @BeforeTest
   public void beforeTest() {
 	  System.out.println("This is Before test");
   }
- 
   @AfterTest
   public void afterTest() {
 	  System.out.println("This is after test");
   }
- 
   @BeforeSuite
   public void beforeSuite() {
 	  System.out.println("This is Before suite");
   }
- 
   @AfterSuite
   public void afterSuite() {
 	  System.out.println("This is after suite");
   }
- 
 }

@@ -18,7 +18,7 @@ public class Lab_11POM {
 	By cart = By.cssSelector(".button-group .fa-shopping-cart");
 	
 	
-	public Lab11_POM(WebDriver driver2) {
+	public void Lab11_POM(WebDriver driver2) {
 		this.driver = driver2;
 	}
 	
