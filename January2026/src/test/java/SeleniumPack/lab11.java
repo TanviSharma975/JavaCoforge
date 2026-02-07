@@ -27,17 +27,17 @@ public class lab11 {
   @Test
   public void f() {
 	  driver.get("https://tutorialsninja.com/demo/index.php?");
-	  Lab11_POM obj = new Lab11_POM(driver);
+	  Lab11_2 obj = new Lab11_2(driver);
 	  
 	  driver.manage().window().setSize(new Dimension(550, 672));
 	  
 	 obj.faBar();
 	 obj.clickDesktop();
 	 obj.clickMac();
-	 obj.clickSort();
+	 obj.clickMac();
 	 obj.clickSortSelect();
-	 obj.clickChild();
-	 obj.clickCart();
+	 obj.clickMac();
+	 obj.clickMac();
 	
   }
   @BeforeMethod

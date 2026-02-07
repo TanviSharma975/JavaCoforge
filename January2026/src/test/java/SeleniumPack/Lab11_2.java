@@ -68,19 +68,19 @@ public Lab11_2(WebDriver driver2) {
 		// TODO Auto-generated method stub
 		
 	}
-	  private void clickSortSelect() {
+	  void clickSortSelect() {
 		// TODO Auto-generated method stub
 		
 	}
-	  private void clickMac() {
+	  void clickMac() {
 		// TODO Auto-generated method stub
 		
 	}
-	  private void clickDesktop() {
+	  void clickDesktop() {
 		// TODO Auto-generated method stub
 		
 	}
-	  private void faBar() {
+	  void faBar() {
 		// TODO Auto-generated method stub
 		
 	}

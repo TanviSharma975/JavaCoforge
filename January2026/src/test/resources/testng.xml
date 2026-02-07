@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ORHM Test Suite">
+
+    <test name="ORHM Package Tests">
+        <packages>
+            <package name="com.orhrm.tests"/>
+        </packages>
+    </test>
+
+</suite>

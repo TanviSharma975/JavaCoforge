@@ -39,5 +39,9 @@ public class NewPageFactory {
 	{
 		return dashboard.isDisplayed();
 	}
+	public static NewPageFactory initElements(WebDriver driver2, Class<NewPageFactory> class1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
  
 }

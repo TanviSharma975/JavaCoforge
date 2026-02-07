@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.orhrm.tests.TestTest">
+      <class name="com.orhrm.tests.NewTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="test"/>
-          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.orhrm.tests.TestTest -->
+      </class> <!-- com.orhrm.tests.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

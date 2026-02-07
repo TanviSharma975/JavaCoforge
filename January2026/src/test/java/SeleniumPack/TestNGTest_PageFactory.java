@@ -1,4 +1,6 @@
 package SeleniumPack;
+ 
+ 
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.BeforeMethod;
@@ -6,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
 import static org.testng.Assert.*;
- 
+
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +25,7 @@ public class TestNGTest_PageFactory {
   @Test(dataProvider = "dp")
   public void f(String username, String password) {
 	  System.out.println("This is test");
-	  Login_Page_Factory obj=PageFactory.initElements(driver, Login_Page_Factory.class);
+	 NewPageFactory obj=NewPageFactory.initElements(driver,NewPageFactory.class);
 	  		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	  	/*
 	  		driver.findElement(By.name("username")).sendKeys(username);
@@ -60,7 +62,7 @@ public class TestNGTest_PageFactory {
 	  System.out.println("This is After Method");
 	  driver.quit();
   }
- 
+
   @DataProvider
   public Object[][] dp() {
     return new Object[][] {

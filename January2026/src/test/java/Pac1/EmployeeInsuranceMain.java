@@ -2,7 +2,7 @@ package Pac1;
 import java.util.Scanner;
  
 // Employee class
-class Employee {
+class employee {
  
     private int id;
     private String name;
@@ -10,7 +10,7 @@ class Employee {
     private String designation;
     private String insuranceScheme;
  
-    public Employee(int id, String name, double salary, String designation) {
+    public employee(int id, String name, double salary, String designation) {
         this.id = id;
         this.name = name;
         this.salary = salary;
@@ -37,33 +37,43 @@ class Employee {
         return insuranceScheme;
     }
  
-    public void setInsuranceScheme(String insuranceScheme) {
+    public void setInsuranceScheme11(String insuranceScheme) {
         this.insuranceScheme = insuranceScheme;
     }
+
+	public void setInsuranceScheme1(String insuranceScheme2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setInsuranceScheme(String insuranceScheme2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
  
 // Service interface
 interface EmployeeService {
-    void findInsuranceScheme(Employee emp);
+    void findInsuranceScheme(employee emp);
 }
  
 // Service implementation
 class EmployeeServiceImpl implements EmployeeService {
  
     @Override
-    public void findInsuranceScheme(Employee emp) {
+    public void findInsuranceScheme(employee emp) {
  
         double salary = emp.getSalary();
         String designation = emp.getDesignation();
  
         if (salary > 50000 && designation.equalsIgnoreCase("Manager")) {
-            emp.setInsuranceScheme("Scheme A");
+            emp.setInsuranceScheme11("Scheme A");
         } else if (salary > 30000) {
-            emp.setInsuranceScheme("Scheme B");
+            emp.setInsuranceScheme11("Scheme B");
         } else if (salary > 20000) {
-            emp.setInsuranceScheme("Scheme C");
+            emp.setInsuranceScheme11("Scheme C");
         } else {
-            emp.setInsuranceScheme("No Scheme");
+            emp.setInsuranceScheme11("No Scheme");
         }
     }
 }
@@ -89,7 +99,7 @@ public class EmployeeInsuranceMain {
         System.out.print("Enter Designation: ");
         String designation = sc.nextLine();
  
-        Employee emp = new Employee(id, name, salary, designation);
+        employee emp = new employee(id, name, salary, designation);
  
         EmployeeService service = new EmployeeServiceImpl();
         service.findInsuranceScheme(emp);
